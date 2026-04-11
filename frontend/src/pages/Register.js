@@ -12,7 +12,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 py-12" style={{ backgroundColor: "#050505" }}>
+    <div className="min-h-screen flex items-center justify-center px-6 py-12 notranslate" style={{ backgroundColor: "#050505" }}>
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2.5 mb-8">
