@@ -12,7 +12,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 py-12 notranslate" style={{ backgroundColor: "#050505" }}>
+    <div className="min-h-screen flex items-center justify-center px-6 py-12" style={{ backgroundColor: "#050505" }}>
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2.5 mb-8">
@@ -25,7 +25,7 @@ const Register = () => {
           <p className="text-sm text-[#a1a1aa]">7 zile gratuit, fără card de credit</p>
         </div>
 
-        <form data-testid="register-form" onSubmit={handleSubmit} className="space-y-4 notranslate">
+        <form data-testid="register-form" onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-xs font-semibold text-[#a1a1aa] mb-2">Nume complet</label>
             <input

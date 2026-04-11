@@ -83,7 +83,7 @@ const PricingPage = () => {
   };
 
   return (
-    <div className="min-h-screen notranslate" style={{ backgroundColor: "#050505", color: "#f4f4f5" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#050505", color: "#f4f4f5" }}>
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a] border-b border-[#1e1e21]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 h-[72px] flex items-center justify-between">

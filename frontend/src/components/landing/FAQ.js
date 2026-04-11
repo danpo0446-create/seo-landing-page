@@ -40,7 +40,7 @@ const FAQ = () => {
     <section id="faq" data-testid="faq-section" className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <span className="section-label notranslate">FAQ</span>
+          <span className="section-label">FAQ</span>
           <h2 className="text-3xl sm:text-4xl font-extrabold mt-6 mb-4 tracking-tight text-white">
             Intrebari
             <span className="gradient-text"> frecvente</span>

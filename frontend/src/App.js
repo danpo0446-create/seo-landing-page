@@ -24,7 +24,7 @@ import LanguageSelector from "@/components/LanguageSelector";
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen notranslate" style={{ backgroundColor: "#050505" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#050505" }}>
       <Navbar />
       <Hero />
       <Stats />

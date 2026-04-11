@@ -21,7 +21,7 @@ const Hero = () => {
 
         <h1
           data-testid="hero-headline"
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight mb-6 animate-fade-in-up text-white notranslate"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight mb-6 animate-fade-in-up text-white"
         >
           Automatizează-ți SEO-ul
           <br />
@@ -30,7 +30,7 @@ const Hero = () => {
 
         <p
           data-testid="hero-subtitle"
-          className="text-base sm:text-lg text-[#a1a1aa] max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up notranslate"
+          className="text-base sm:text-lg text-[#a1a1aa] max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up"
           style={{ animationDelay: "150ms" }}
         >
           Generează articole SEO, publică automat pe WordPress, monitorizează traficul și

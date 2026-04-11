@@ -2,7 +2,7 @@ import PageLayout from "@/components/PageLayout";
 
 const Terms = () => (
   <PageLayout>
-    <div className="max-w-3xl mx-auto px-6 py-16 notranslate">
+    <div className="max-w-3xl mx-auto px-6 py-16">
       <h1 data-testid="terms-title" className="text-3xl sm:text-4xl font-extrabold mb-8 text-white">Termeni și Condiții</h1>
       <p className="text-xs text-[#52525b] mb-8">Ultima actualizare: Ianuarie 2026</p>
 

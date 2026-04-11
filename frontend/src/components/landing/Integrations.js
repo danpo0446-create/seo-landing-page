@@ -18,7 +18,7 @@ const Integrations = () => {
   return (
     <section data-testid="integrations-section" className="py-24 px-6" style={{ backgroundColor: "var(--bg-secondary)" }}>
       <div className="max-w-5xl mx-auto text-center">
-        <span className="section-label notranslate">Integrări</span>
+        <span className="section-label">Integrări</span>
         <h2 className="text-3xl sm:text-4xl font-extrabold mt-6 mb-4 tracking-tight text-white">
           Se conecteaza cu
           <br />

@@ -29,7 +29,7 @@ const HowItWorks = () => {
     <section id="how-it-works" data-testid="how-it-works-section" className="py-24 px-6" style={{ backgroundColor: "var(--bg-secondary)" }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <span className="section-label notranslate">Cum Functioneaza</span>
+          <span className="section-label">Cum Functioneaza</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mt-6 mb-4 tracking-tight text-white">
             3 pasi simpli catre
             <br />

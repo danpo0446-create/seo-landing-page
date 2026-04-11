@@ -20,7 +20,7 @@ const Benefits = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="section-label notranslate">De Ce Noi</span>
+            <span className="section-label">De Ce Noi</span>
             <h2 className="text-3xl sm:text-4xl font-extrabold mt-6 mb-4 tracking-tight text-white">
               Rezultate reale,
               <br />
