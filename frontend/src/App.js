@@ -18,6 +18,7 @@ import Contact from "@/pages/Contact";
 import Register from "@/pages/Register";
 import Login from "@/pages/Login";
 import SetupGuide from "@/pages/SetupGuide";
+import PricingPage from "@/pages/PricingPage";
 
 const LandingPage = () => {
   return (
@@ -49,6 +50,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/ghid-configurare" element={<SetupGuide />} />
+        <Route path="/pricing" element={<PricingPage />} />
       </Routes>
     </BrowserRouter>
   );

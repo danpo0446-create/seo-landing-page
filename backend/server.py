@@ -37,10 +37,36 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+class ContactMessage(BaseModel):
+    name: str
+    email: str
+    subject: str
+    message: str
+
+class ContactResponse(BaseModel):
+    success: bool
+    message: str
+
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
     return {"message": "Hello World"}
+
+@api_router.post("/contact", response_model=ContactResponse)
+async def submit_contact(msg: ContactMessage):
+    doc = msg.model_dump()
+    doc['timestamp'] = datetime.now(timezone.utc).isoformat()
+    doc['read'] = False
+    await db.contact_messages.insert_one(doc)
+    logger.info(f"Contact message from {msg.email}: {msg.subject}")
+    return ContactResponse(success=True, message="Mesaj trimis cu succes!")
+
+@api_router.get("/contact/messages")
+async def get_contact_messages():
+    messages = await db.contact_messages.find({}, {"_id": 0}).to_list(100)
+    return messages
+
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):

@@ -86,7 +86,7 @@ const SetupGuide = () => (
           Echipa noastră poate face toată configurarea pentru tine. Setup complet: <strong className="text-white">&euro;79</strong> (plată unică).
         </p>
         <a
-          href="mailto:support@seamanshelp.com?subject=Setup Complet SEO Automation"
+          href="mailto:martechassistance@gmail.com?subject=Setup Complet SEO Automation"
           data-testid="guide-setup-btn"
           className="inline-flex items-center gap-2 px-6 py-3 bg-[#00D26A] text-black font-semibold text-sm rounded-xl hover:bg-[#00E676] transition-all"
         >

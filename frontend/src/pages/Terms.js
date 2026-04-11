@@ -59,7 +59,7 @@ const Terms = () => (
 
         <section>
           <h2 className="text-lg font-bold text-white mb-3">10. Contact</h2>
-          <p>Pentru orice întrebări legate de acești Termeni și Condiții, ne puteți contacta la adresa de email: <a href="mailto:support@seamanshelp.com" className="text-[#00D26A] hover:underline">support@seamanshelp.com</a></p>
+          <p>Pentru orice întrebări legate de acești Termeni și Condiții, ne puteți contacta la adresa de email: <a href="mailto:martechassistance@gmail.com" className="text-[#00D26A] hover:underline">martechassistance@gmail.com</a></p>
         </section>
       </div>
     </div>

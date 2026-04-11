@@ -75,7 +75,7 @@ const Privacy = () => (
 
         <section>
           <h2 className="text-lg font-bold text-white mb-3">9. Contact DPO</h2>
-          <p>Pentru exercitarea drepturilor sau întrebări privind confidențialitatea, contactați responsabilul cu protecția datelor: <a href="mailto:privacy@seamanshelp.com" className="text-[#00D26A] hover:underline">privacy@seamanshelp.com</a></p>
+          <p>Pentru exercitarea drepturilor sau întrebări privind confidențialitatea, contactați responsabilul cu protecția datelor: <a href="mailto:martechassistance@gmail.com" className="text-[#00D26A] hover:underline">martechassistance@gmail.com</a></p>
         </section>
       </div>
     </div>

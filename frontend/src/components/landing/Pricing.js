@@ -106,7 +106,7 @@ const Pricing = () => {
         </div>
 
         <div className="text-center mt-8">
-          <Link to="/register" data-testid="pricing-see-all" className="text-sm text-[#00D26A] font-medium hover:underline">
+          <Link to="/pricing" data-testid="pricing-see-all" className="text-sm text-[#00D26A] font-medium hover:underline">
             Vezi toate planurile și funcționalitățile &rarr;
           </Link>
         </div>
