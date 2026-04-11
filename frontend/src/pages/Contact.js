@@ -82,7 +82,7 @@ const Contact = () => {
           {/* Right - Form */}
           <div className="p-6 sm:p-8 rounded-2xl bg-[#0c0c0e] border border-[#1e1e21]">
             <h2 className="text-lg font-bold text-white mb-6">Trimite un mesaj</h2>
-            <form data-testid="contact-form" onSubmit={handleSubmit} className="space-y-5">
+            <form data-testid="contact-form" onSubmit={handleSubmit} className="space-y-5 notranslate">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold text-[#a1a1aa] mb-2">Nume</label>

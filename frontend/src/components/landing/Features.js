@@ -75,10 +75,10 @@ const Features = () => {
     <section id="features" data-testid="features-section" className="py-24 px-6" style={{ backgroundColor: "#111113" }}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-[#1e1e21] text-[#a1a1aa] text-[13px] font-medium border border-[#2a2a2d]">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-[#1e1e21] text-[#a1a1aa] text-[13px] font-medium border border-[#2a2a2d] notranslate">
             Funcționalități
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mt-6 mb-4 tracking-tight text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mt-6 mb-4 tracking-tight text-white notranslate">
             Tot ce ai nevoie pentru SEO de succes
           </h2>
           <p className="text-[#a1a1aa] max-w-2xl mx-auto text-base sm:text-lg">

@@ -25,7 +25,7 @@ const Register = () => {
           <p className="text-sm text-[#a1a1aa]">7 zile gratuit, fără card de credit</p>
         </div>
 
-        <form data-testid="register-form" onSubmit={handleSubmit} className="space-y-4">
+        <form data-testid="register-form" onSubmit={handleSubmit} className="space-y-4 notranslate">
           <div>
             <label className="block text-xs font-semibold text-[#a1a1aa] mb-2">Nume complet</label>
             <input

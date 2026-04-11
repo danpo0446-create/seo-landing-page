@@ -25,7 +25,7 @@ const Login = () => {
           <p className="text-sm text-[#a1a1aa]">Bine ai revenit! Conectează-te la contul tău.</p>
         </div>
 
-        <form data-testid="login-form" onSubmit={handleSubmit} className="space-y-4">
+        <form data-testid="login-form" onSubmit={handleSubmit} className="space-y-4 notranslate">
           <div>
             <label className="block text-xs font-semibold text-[#a1a1aa] mb-2">Email</label>
             <input

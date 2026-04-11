@@ -60,7 +60,7 @@ const Navbar = () => {
                 href={l.href}
                 data-testid={`nav-link-${l.href.slice(1)}`}
                 onClick={(e) => scrollTo(e, l.href)}
-                className="text-[15px] font-medium text-[#a1a1aa] hover:text-white transition-colors"
+                className="text-[15px] font-medium text-[#a1a1aa] hover:text-white transition-colors notranslate"
               >
                 {l.label}
               </a>
@@ -79,7 +79,7 @@ const Navbar = () => {
           <Link
             to="/register"
             data-testid="nav-cta-btn"
-            className="text-[14px] font-semibold px-6 py-2.5 bg-[#00D26A] text-black rounded-lg hover:bg-[#00E676] transition-all hover:-translate-y-0.5"
+            className="text-[14px] font-semibold px-6 py-2.5 bg-[#00D26A] text-black rounded-lg hover:bg-[#00E676] transition-all hover:-translate-y-0.5 notranslate"
           >
             Începe Gratuit
           </Link>

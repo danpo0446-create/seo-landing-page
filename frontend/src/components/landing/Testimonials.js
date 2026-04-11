@@ -29,11 +29,11 @@ const Testimonials = () => {
     <section id="testimonials" data-testid="testimonials-section" className="py-24 px-6" style={{ backgroundColor: "var(--bg-secondary)" }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <span className="section-label">Testimoniale</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mt-6 mb-4 tracking-tight text-white">
+          <span className="section-label notranslate">Testimoniale</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mt-6 mb-4 tracking-tight text-white notranslate">
             Ce spun
             <br />
-            <span className="gradient-text">clientii nostri</span>
+            <span className="gradient-text">clienții noștri</span>
           </h2>
         </div>
 
