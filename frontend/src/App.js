@@ -19,6 +19,8 @@ import Register from "@/pages/Register";
 import Login from "@/pages/Login";
 import SetupGuide from "@/pages/SetupGuide";
 import PricingPage from "@/pages/PricingPage";
+import CookieConsent from "@/components/CookieConsent";
+import LanguageSelector from "@/components/LanguageSelector";
 
 const LandingPage = () => {
   return (
@@ -42,6 +44,8 @@ const LandingPage = () => {
 function App() {
   return (
     <BrowserRouter>
+      <CookieConsent />
+      <LanguageSelector />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/terms" element={<Terms />} />

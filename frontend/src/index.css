@@ -81,6 +81,14 @@ body {
   background: #52525b;
 }
 
+/* Hide Google Translate default bar */
+.goog-te-banner-frame { display: none !important; }
+body { top: 0 !important; }
+.goog-te-gadget { display: none !important; }
+.skiptranslate { display: none !important; }
+body > .skiptranslate { display: none !important; }
+.goog-te-spinner-pos { display: none !important; }
+
 @layer base {
   * {
     @apply border-border;
