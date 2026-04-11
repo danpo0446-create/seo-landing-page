@@ -32,7 +32,12 @@ const CookieConsent = () => {
         We use cookies to enhance your browsing experience, provide personalized content,
         and improve site performance. For the best experience, please keep your browser up
         to date —{" "}
-        <a href="#" className="text-[#00D26A] underline hover:text-[#00E676]">
+        <a
+          href="https://browsehappy.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#00D26A] underline hover:text-[#00E676]"
+        >
           Performance Browser Fix
         </a>
         .

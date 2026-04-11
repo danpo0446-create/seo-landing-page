@@ -84,10 +84,12 @@ body {
 /* Hide Google Translate default bar */
 .goog-te-banner-frame { display: none !important; }
 body { top: 0 !important; }
-.goog-te-gadget { display: none !important; }
-.skiptranslate { display: none !important; }
-body > .skiptranslate { display: none !important; }
+.goog-te-gadget { font-size: 0 !important; }
+.goog-te-gadget .goog-te-combo { font-size: 14px !important; }
+body > .skiptranslate { display: none !important; height: 0 !important; overflow: hidden !important; }
 .goog-te-spinner-pos { display: none !important; }
+#goog-gt-tt { display: none !important; }
+.goog-text-highlight { background: none !important; box-shadow: none !important; }
 
 @layer base {
   * {
