@@ -1,5 +1,6 @@
 import { useInView } from "@/hooks/useInView";
 import { Check, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const plans = [
   {
@@ -89,8 +90,8 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <a
-                href="#"
+              <Link
+                to="/register"
                 data-testid={`pricing-cta-${plan.name.toLowerCase()}`}
                 className={`w-full flex items-center justify-center gap-2 py-3 rounded-full font-semibold text-sm transition-all ${
                   plan.popular
@@ -99,15 +100,15 @@ const Pricing = () => {
                 }`}
               >
                 Începe Gratuit <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-8">
-          <a href="#" data-testid="pricing-see-all" className="text-sm text-[#00D26A] font-medium hover:underline">
+          <Link to="/register" data-testid="pricing-see-all" className="text-sm text-[#00D26A] font-medium hover:underline">
             Vezi toate planurile și funcționalitățile &rarr;
-          </a>
+          </Link>
         </div>
       </div>
     </section>

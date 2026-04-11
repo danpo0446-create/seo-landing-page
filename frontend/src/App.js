@@ -12,6 +12,12 @@ import Pricing from "@/components/landing/Pricing";
 import Testimonials from "@/components/landing/Testimonials";
 import FAQ from "@/components/landing/FAQ";
 import Footer from "@/components/landing/Footer";
+import Terms from "@/pages/Terms";
+import Privacy from "@/pages/Privacy";
+import Contact from "@/pages/Contact";
+import Register from "@/pages/Register";
+import Login from "@/pages/Login";
+import SetupGuide from "@/pages/SetupGuide";
 
 const LandingPage = () => {
   return (
@@ -37,6 +43,12 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/ghid-configurare" element={<SetupGuide />} />
       </Routes>
     </BrowserRouter>
   );

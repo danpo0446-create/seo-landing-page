@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 
 const trustBadges = ["100% White-Label", "Articole în Română", "Suport 24/7"];
@@ -40,9 +41,9 @@ const Hero = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-in-up"
           style={{ animationDelay: "250ms" }}
         >
-          <a href="#pricing" data-testid="hero-cta-primary" className="btn-primary">
+          <Link to="/register" data-testid="hero-cta-primary" className="btn-primary">
             Începe Trial Gratuit <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
           <a href="#features" data-testid="hero-cta-secondary" className="btn-secondary">
             Vezi Funcționalitățile
           </a>

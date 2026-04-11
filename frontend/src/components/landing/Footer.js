@@ -1,12 +1,7 @@
 import { Zap, ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const scrollTo = (e, href) => {
-    e.preventDefault();
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <>
       {/* CTA Section */}
@@ -24,14 +19,13 @@ const Footer = () => {
           <p className="text-[#a1a1aa] text-base sm:text-lg mb-8 max-w-xl mx-auto">
             Înregistrează-te gratuit și începe să generezi articole în mai puțin de 5 minute.
           </p>
-          <a
-            href="#pricing"
+          <Link
+            to="/register"
             data-testid="footer-cta-btn"
             className="btn-primary inline-flex"
-            onClick={(e) => scrollTo(e, "#pricing")}
           >
             Începe Trial Gratuit de 7 Zile <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
           <p className="text-xs text-[#52525b] mt-4">
             Fără card de credit necesar &bull; Anulează oricând
           </p>
@@ -41,25 +35,25 @@ const Footer = () => {
       {/* Footer */}
       <footer data-testid="footer" className="py-8 px-6 border-t border-[#1a1a1d]" style={{ backgroundColor: "#050505" }}>
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2.5">
+          <Link to="/" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg bg-[#00D26A] flex items-center justify-center">
               <Zap className="w-4 h-4 text-black" />
             </div>
             <span className="text-sm font-bold text-white leading-tight">
               SEO Phoenix Martech<br />Assistance
             </span>
-          </div>
+          </Link>
 
           <div className="flex items-center gap-6">
-            <a href="#" data-testid="footer-link-terms" className="text-xs text-[#52525b] hover:text-[#a1a1aa] transition-colors">
+            <Link to="/terms" data-testid="footer-link-terms" className="text-xs text-[#52525b] hover:text-[#a1a1aa] transition-colors">
               Termeni și Condiții
-            </a>
-            <a href="#" data-testid="footer-link-privacy" className="text-xs text-[#52525b] hover:text-[#a1a1aa] transition-colors">
+            </Link>
+            <Link to="/privacy" data-testid="footer-link-privacy" className="text-xs text-[#52525b] hover:text-[#a1a1aa] transition-colors">
               Confidențialitate
-            </a>
-            <a href="#" data-testid="footer-link-contact" className="text-xs text-[#52525b] hover:text-[#a1a1aa] transition-colors">
+            </Link>
+            <Link to="/contact" data-testid="footer-link-contact" className="text-xs text-[#52525b] hover:text-[#a1a1aa] transition-colors">
               Contact
-            </a>
+            </Link>
           </div>
 
           <p className="text-xs text-[#52525b]">
