@@ -45,13 +45,18 @@ const services = [
     desc: "Genereaza articole SEO optimizate cu inteligenta artificiala",
     price: "~€0.05-0.10 per articol",
     priceNote: "Platesti per utilizare (pay-as-you-go)",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/120px-OpenAI_Logo.svg.png",
+    iconBg: "bg-[#10a37f]",
+    iconEmoji: "✦",
+    link: "https://platform.openai.com/signup",
     steps: [
-      { text: "Creaza cont pe platform.openai.com", link: "https://platform.openai.com/signup" },
-      { text: "Mergi la API Keys si creeaza o cheie noua", link: "https://platform.openai.com/api-keys" },
-      { text: "Adauga credit (minim $5) in Billing", link: "https://platform.openai.com/settings/organization/billing/overview" },
-      { text: "Copiaza cheia API si adaug-o in SEO Automation → Setari" },
+      "Acceseaza platform.openai.com si creaza cont",
+      "Confirma adresa de email",
+      "Din meniu, selecteaza 'API Keys'",
+      "Click pe 'Create new secret key'",
+      "Copiaza cheia (incepe cu 'sk-')",
+      "Important: Adauga credit in sectiunea Billing (minim $5)",
     ],
+    tip: "Recomandam sa setezi un limit lunar de $10-20 pentru inceput",
   },
   {
     name: "Google Gemini",
@@ -60,13 +65,17 @@ const services = [
     desc: "Alternativa gratuita la OpenAI pentru generare continut",
     price: "GRATUIT",
     priceNote: "Pana la 60 requesturi/minut",
-    icon: "https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690b6.svg",
+    iconBg: "bg-[#4285f4]",
+    iconEmoji: "✦",
+    link: "https://aistudio.google.com/",
     steps: [
-      { text: "Mergi la Google AI Studio", link: "https://aistudio.google.com/" },
-      { text: "Conecteaza-te cu contul Google" },
-      { text: "Creeaza un API Key din meniul Get API Key", link: "https://aistudio.google.com/app/apikey" },
-      { text: "Copiaza cheia si adaug-o in SEO Automation → Setari" },
+      "Acceseaza aistudio.google.com",
+      "Logheaza-te cu contul Google",
+      "Click pe 'Get API Key'",
+      "Selecteaza sau creaza un proiect",
+      "Copiaza cheia API",
     ],
+    tip: "Ideal pentru teste sau daca vrei sa reduci costurile",
   },
   {
     name: "Resend (Email Outreach)",
@@ -75,43 +84,54 @@ const services = [
     desc: "Trimite emailuri pentru campanii de backlinks si outreach",
     price: "3,000 emailuri/luna GRATUIT",
     priceNote: "Apoi €20/luna pentru 50,000 emailuri",
-    icon: "https://resend.com/static/brand/resend-icon-black.svg",
+    iconBg: "bg-[#6c47ff]",
+    iconEmoji: "✉",
+    link: "https://resend.com/signup",
     steps: [
-      { text: "Creaza cont pe resend.com", link: "https://resend.com/signup" },
-      { text: "Mergi la API Keys si creeaza o cheie", link: "https://resend.com/api-keys" },
-      { text: "Optional: Adauga domeniu propriu pentru trimitere", link: "https://resend.com/domains" },
-      { text: "Copiaza cheia API si adaug-o in SEO Automation → Setari" },
+      "Creaza cont pe resend.com",
+      "Verifica domeniul tau (adaugi recorduri DNS)",
+      "Din Dashboard, click pe 'API Keys'",
+      "Creaza o cheie noua",
+      "Copiaza cheia (incepe cu 're_')",
     ],
+    tip: "Necesita domeniu propriu pentru trimitere. Planul gratuit e suficient pentru inceput.",
   },
   {
-    name: "SendGrid",
+    name: "SendGrid (Email)",
     badge: "Plan Gratuit",
     badgeColor: "bg-[#00D26A]/20 text-[#00D26A] border-[#00D26A]/30",
-    desc: "Alternativa la Resend pentru trimitere emailuri in volum mare",
+    desc: "Alternativa pentru email outreach cu plan gratuit permanent",
     price: "100 emailuri/zi GRATUIT",
-    priceNote: "Apoi de la $19.95/luna",
-    icon: "https://sendgrid.com/content/dam/sendgrid/legacy/themes/flavor/common/images/favicon.ico",
+    priceNote: "Pentru totdeauna (3,000/luna)",
+    iconBg: "bg-[#1A82E2]",
+    iconEmoji: "✉",
+    link: "https://signup.sendgrid.com/",
     steps: [
-      { text: "Creaza cont pe sendgrid.com", link: "https://signup.sendgrid.com/" },
-      { text: "Verifica adresa de email si identitatea" },
-      { text: "Mergi la Settings → API Keys → Create API Key", link: "https://app.sendgrid.com/settings/api_keys" },
-      { text: "Copiaza cheia API si adaug-o in SEO Automation → Setari" },
+      "Creaza cont pe sendgrid.com",
+      "Verifica identitatea (poate dura 1-2 zile)",
+      "Din Settings > API Keys",
+      "Creaza cheie cu 'Full Access'",
+      "Copiaza cheia (incepe cu 'SG.')",
     ],
+    tip: "Verificarea contului poate dura. Incepe procesul din timp.",
   },
   {
-    name: "Pexels (Imagini Gratuite)",
-    badge: "100% Gratuit",
+    name: "Pexels (Imagini)",
+    badge: "Plan Gratuit",
     badgeColor: "bg-[#00D26A]/20 text-[#00D26A] border-[#00D26A]/30",
-    desc: "Imagini profesionale gratuite inserate automat in articole",
+    desc: "Imagini gratuite de calitate pentru articolele tale",
     price: "GRATUIT",
-    priceNote: "Nelimitat",
-    icon: "https://www.pexels.com/assets/static/images/meta/pexels-icon.png",
+    priceNote: "200 requesturi/ora, nelimitat",
+    iconBg: "bg-[#05A081]",
+    iconEmoji: "📷",
+    link: "https://www.pexels.com/api/",
     steps: [
-      { text: "Creaza cont pe pexels.com", link: "https://www.pexels.com/join/" },
-      { text: "Mergi la Image & Video API", link: "https://www.pexels.com/api/" },
-      { text: "Creeaza un API Key (gratuit, instant)" },
-      { text: "Copiaza cheia si adaug-o in SEO Automation → Setari" },
+      "Creaza cont pe pexels.com",
+      "Confirma emailul",
+      "Acceseaza pexels.com/api",
+      "Copiaza cheia API din dashboard",
     ],
+    tip: "Cel mai simplu de configurat. Recomandat pentru toti utilizatorii.",
   },
 ];
 
@@ -253,8 +273,8 @@ const SetupGuide = () => {
                   <div className="p-6">
                     <div className="flex items-start justify-between gap-4 flex-wrap">
                       <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-xl bg-[#1e1e21] flex items-center justify-center overflow-hidden">
-                          <img src={s.icon} alt={s.name} className="w-7 h-7 object-contain" onError={(e) => { e.target.style.display = 'none'; }} />
+                        <div className={`w-12 h-12 rounded-xl ${s.iconBg} flex items-center justify-center text-white text-lg`}>
+                          {s.iconEmoji}
                         </div>
                         <div>
                           <div className="flex items-center gap-2 flex-wrap">
@@ -275,26 +295,34 @@ const SetupGuide = () => {
                     className="w-full flex items-center gap-2 px-6 py-3 text-left border-t border-[#1e1e21] hover:bg-[#1e1e21]/30 transition-colors"
                   >
                     <Settings className="w-4 h-4 text-[#52525b]" />
-                    <span className="text-sm text-[#a1a1aa]">Vezi pasii de configurare</span>
+                    <span className="text-sm text-[#a1a1aa] underline">Vezi pasii de configurare</span>
                     <ChevronDown className={`w-4 h-4 text-[#52525b] ml-auto transition-transform ${openService === i ? "rotate-180" : ""}`} />
                   </button>
                   {openService === i && (
-                    <div className="px-6 pb-5 border-t border-[#1e1e21] pt-4">
-                      <ol className="space-y-3">
+                    <div className="px-6 pb-6 border-t border-[#1e1e21] pt-5">
+                      <ol className="space-y-4 mb-5">
                         {s.steps.map((step, j) => (
                           <li key={j} className="flex items-start gap-3">
                             <span className="w-6 h-6 rounded-full bg-[rgba(0,210,106,0.12)] flex items-center justify-center text-xs font-bold text-[#00D26A] flex-shrink-0 mt-0.5">{j + 1}</span>
-                            <div>
-                              <span className="text-sm text-[#a1a1aa]">{step.text || step}</span>
-                              {step.link && (
-                                <a href={step.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 ml-2 text-xs text-[#00D26A] hover:underline">
-                                  Deschide <ExternalLink className="w-3 h-3" />
-                                </a>
-                              )}
-                            </div>
+                            <span className="text-sm text-[#a1a1aa]">{step}</span>
                           </li>
                         ))}
                       </ol>
+                      {/* Sfat box */}
+                      <div className="flex items-start gap-2 p-4 rounded-xl bg-[rgba(234,179,8,0.06)] border border-[rgba(234,179,8,0.15)] mb-5">
+                        <span className="text-amber-400 text-sm mt-0.5">ⓘ</span>
+                        <p className="text-sm text-[#a1a1aa]"><strong className="text-amber-400">Sfat:</strong> {s.tip}</p>
+                      </div>
+                      {/* Deschide button */}
+                      <a
+                        href={s.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[#2a2a2d] text-white text-sm font-medium hover:bg-[#1e1e21] transition-colors"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Deschide {s.name}
+                      </a>
                     </div>
                   )}
                 </div>
