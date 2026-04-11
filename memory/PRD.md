@@ -5,36 +5,29 @@ Full SEO Automation landing page matching saas.seamanshelp.com with all features
 
 ## Architecture
 - **Frontend**: React 19 + Tailwind CSS + Lucide React + React Router v7 + Google Translate
-- **Backend**: FastAPI + MongoDB + Resend (email)
+- **Backend**: FastAPI + MongoDB + Resend
 - **Font**: Manrope | **Theme**: Dark (#050505) + green (#00D26A)
 
-## Implemented (Jan 2026)
+## Implemented
 
 ### Landing Page (12 sections)
-Navbar, Hero, Stats, Features (12 cards), Transparency, How It Works, Benefits, Integrations, Pricing, Testimonials, FAQ, Footer
+Navbar, Hero, Stats, Features (12), Transparency, How It Works, Benefits, Integrations, Pricing, Testimonials, FAQ, Footer
 
 ### Pages (8 routes)
 `/` `/pricing` `/contact` `/terms` `/privacy` `/register` `/login` `/ghid-configurare`
 
 ### Integrations
-- **Resend**: Contact form emails sent to martechassistance@gmail.com with HTML template
-- **Google Translate**: 5 languages (RO, EN, FR, DE, IT) - script in index.html, cookie-based switching
-- **MongoDB**: Contact messages stored
+- **Resend**: Emails to martechassistance@gmail.com (HTML template, reply_to)
+- **Google Translate**: 5 langs (RO/EN/FR/DE/IT), flag images from flagcdn.com, cookie+reload, localStorage persistence
+- **MongoDB**: Contact messages
 
-### Global Widgets
-- **Cookie Consent** (bottom-left): ACCEPT/REJECT, localStorage, link to browsehappy.com
-- **Language Selector** (bottom-right): Google Translate with custom dropdown UI
+### Widgets
+- **Cookie Consent** (bottom-left): ACCEPT/REJECT, localStorage, browsehappy.com link
+- **Language Selector** (bottom-right): Google Translate, flag images (not emoji), notranslate class
 
-### Backend Endpoints
-- `POST /api/contact` - Save message + send email via Resend
-- `GET /api/contact/messages` - Get messages
+### Backend
+- `POST /api/contact` → MongoDB + Resend email
+- `GET /api/contact/messages`
 
-### Key Details
-- Email: martechassistance@gmail.com | Phone: +40 721 578 660 | Constanta, Romania
-- Company: SEO Phoenix Martech Assistance
-- Plans: Starter €19, Pro €49, Agency €99, Enterprise €199
-
-## Testing: 6 iterations, all 100%
-
-## Backlog
-- P1: Real JWT auth | P2: Google Analytics | P2: SEO meta tags
+## Testing: 7 iterations, all 100%
+## Backlog: P1 JWT auth | P2 Google Analytics | P2 SEO meta tags

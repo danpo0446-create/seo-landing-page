@@ -90,6 +90,7 @@ body > .skiptranslate { display: none !important; height: 0 !important; overflow
 .goog-te-spinner-pos { display: none !important; }
 #goog-gt-tt { display: none !important; }
 .goog-text-highlight { background: none !important; box-shadow: none !important; }
+.notranslate { translate: no; }
 
 @layer base {
   * {
