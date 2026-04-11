@@ -1,6 +1,6 @@
 import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 
-const trustBadges = ["100% White-Label", "Articole in Romana", "Suport 24/7"];
+const trustBadges = ["100% White-Label", "Articole în Română", "Suport 24/7"];
 
 const Hero = () => {
   return (
@@ -14,17 +14,17 @@ const Hero = () => {
         >
           <Sparkles className="w-3.5 h-3.5 text-[#00D26A]" />
           <span className="text-[13px] font-semibold text-[#00D26A]">
-            7 zile gratuit &bull; Fara card de credit
+            7 zile gratuit &bull; Fără card de credit
           </span>
         </div>
 
         <h1
           data-testid="hero-headline"
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight mb-6 animate-fade-in-up"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight mb-6 animate-fade-in-up text-white"
         >
-          Automatizeaza-ti SEO-ul
+          Automatizează-ți SEO-ul
           <br />
-          <span className="gradient-text">cu Inteligenta Artificiala</span>
+          <span className="text-[#00D26A]">cu Inteligență Artificială</span>
         </h1>
 
         <p
@@ -32,8 +32,8 @@ const Hero = () => {
           className="text-base sm:text-lg text-[#a1a1aa] max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up"
           style={{ animationDelay: "150ms" }}
         >
-          Genereaza articole SEO, publica automat pe WordPress, monitorizeaza traficul si
-          creste organic fara efort manual. Tot ce ai nevoie intr-o singura platforma.
+          Generează articole SEO, publică automat pe WordPress, monitorizează traficul și
+          crește organic fără efort manual. Tot ce ai nevoie într-o singură platformă.
         </p>
 
         <div
@@ -41,10 +41,10 @@ const Hero = () => {
           style={{ animationDelay: "250ms" }}
         >
           <a href="#pricing" data-testid="hero-cta-primary" className="btn-primary">
-            Incepe Trial Gratuit <ArrowRight className="w-4 h-4" />
+            Începe Trial Gratuit <ArrowRight className="w-4 h-4" />
           </a>
           <a href="#features" data-testid="hero-cta-secondary" className="btn-secondary">
-            Vezi Functionalitatile
+            Vezi Funcționalitățile
           </a>
         </div>
 

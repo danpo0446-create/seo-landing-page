@@ -5,6 +5,7 @@ import Hero from "@/components/landing/Hero";
 import Stats from "@/components/landing/Stats";
 import Features from "@/components/landing/Features";
 import HowItWorks from "@/components/landing/HowItWorks";
+import Transparency from "@/components/landing/Transparency";
 import Benefits from "@/components/landing/Benefits";
 import Integrations from "@/components/landing/Integrations";
 import Pricing from "@/components/landing/Pricing";
@@ -14,11 +15,12 @@ import Footer from "@/components/landing/Footer";
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "var(--bg-primary)" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#050505" }}>
       <Navbar />
       <Hero />
       <Stats />
       <Features />
+      <Transparency />
       <HowItWorks />
       <Benefits />
       <Integrations />
