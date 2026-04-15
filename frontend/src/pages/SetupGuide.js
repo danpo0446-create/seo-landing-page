@@ -243,16 +243,16 @@ const SetupGuide = () => {
                   <p className="text-xs text-[#52525b] italic">Ideal pentru antreprenori si agentii care vor sa inceapa rapid fara batai de cap tehnice.</p>
                 </div>
                 <div className="flex items-center p-8 md:p-10 md:pl-0">
-                  <div className="w-full md:w-52 rounded-xl bg-[#1e1e21] border border-[#2a2a2d] p-6 text-center">
+                  <div className="w-full md:w-56 rounded-xl bg-[#1e1e21] border border-[#2a2a2d] p-6 text-center">
                     <p className="text-xs text-[#a1a1aa] mb-1">Pret unic</p>
                     <div className="text-4xl font-extrabold text-white mb-1">&euro;79</div>
                     <p className="text-xs text-[#71717a] mb-5">platire o singura data</p>
                     <Link
                       to="/contact"
                       data-testid="setup-contact-btn"
-                      className="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg bg-[#00D26A] text-black text-sm font-semibold hover:bg-[#00E676] transition-colors"
+                      className="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg bg-[#00D26A] text-black text-sm font-semibold hover:bg-[#00E676] transition-colors whitespace-nowrap"
                     >
-                      Contacteaza-ne <ArrowRight className="w-4 h-4" />
+                      Contactează-ne <ArrowRight className="w-4 h-4" />
                     </Link>
                     <p className="text-xs text-[#52525b] mt-3">Configurare in 24-48h</p>
                   </div>
