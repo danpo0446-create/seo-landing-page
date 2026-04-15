@@ -9,6 +9,24 @@ const languages = [
   { code: "it", label: "IT", full: "Italiano", flag: "https://flagcdn.com/w40/it.png" },
 ];
 
+function clearGoogTransCookies() {
+  const domains = [
+    window.location.hostname,
+    "." + window.location.hostname,
+    ""
+  ];
+  // Also try parent domain (e.g. .emergentagent.com)
+  const parts = window.location.hostname.split(".");
+  if (parts.length > 2) {
+    domains.push("." + parts.slice(1).join("."));
+  }
+  domains.forEach((domain) => {
+    const domainStr = domain ? `; domain=${domain}` : "";
+    document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/${domainStr}`;
+    document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; SameSite=Lax${domainStr}`;
+  });
+}
+
 const LanguageSelector = () => {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(() => {
@@ -17,7 +35,7 @@ const LanguageSelector = () => {
       const found = languages.find((l) => l.code === saved);
       if (found) return found;
     }
-    return languages[0];
+    return languages[0]; // RO default
   });
   const ref = useRef(null);
 
@@ -30,20 +48,35 @@ const LanguageSelector = () => {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  // On mount, restore language if saved
+  // On mount, if non-RO language was saved, ensure Google Translate is active
   useEffect(() => {
     const saved = localStorage.getItem("selectedLang");
     if (saved && saved !== "ro") {
-      const waitForCombo = setInterval(() => {
+      const initAndTranslate = () => {
         const combo = document.querySelector(".goog-te-combo");
         if (combo) {
           combo.value = saved;
           combo.dispatchEvent(new Event("change", { bubbles: true }));
-          clearInterval(waitForCombo);
+        } else if (window.google && window.google.translate) {
+          // Reinitialize Google Translate
+          new window.google.translate.TranslateElement(
+            { pageLanguage: "ro", includedLanguages: "ro,en,fr,de,it", autoDisplay: false },
+            "google_translate_element"
+          );
+          // Wait for combo to appear then set language
+          const waitCombo = setInterval(() => {
+            const c = document.querySelector(".goog-te-combo");
+            if (c) {
+              c.value = saved;
+              c.dispatchEvent(new Event("change", { bubbles: true }));
+              clearInterval(waitCombo);
+            }
+          }, 300);
+          setTimeout(() => clearInterval(waitCombo), 8000);
         }
-      }, 500);
-      // Stop trying after 10s
-      setTimeout(() => clearInterval(waitForCombo), 10000);
+      };
+      // Try after a delay to let Google script load
+      setTimeout(initAndTranslate, 1500);
     }
   }, []);
 
@@ -52,37 +85,45 @@ const LanguageSelector = () => {
     setOpen(false);
     localStorage.setItem("selectedLang", lang.code);
 
-    const tryCombo = () => {
-      const combo = document.querySelector(".goog-te-combo");
-      if (combo) {
-        if (lang.code === "ro") {
-          // Reset to original
-          combo.value = "ro";
-          combo.dispatchEvent(new Event("change", { bubbles: true }));
-          // Also clear cookie
-          document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        } else {
-          combo.value = lang.code;
-          combo.dispatchEvent(new Event("change", { bubbles: true }));
-        }
-        return true;
-      }
-      return false;
-    };
-
-    // Try immediately, then retry
-    if (!tryCombo()) {
+    if (lang.code === "ro") {
+      // Reset to Romanian - clear everything and reload fresh (GT won't init for RO)
+      clearGoogTransCookies();
+      localStorage.setItem("selectedLang", "ro");
       setTimeout(() => {
-        if (!tryCombo()) {
-          // Fallback: set cookie and reload
-          if (lang.code === "ro") {
-            document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-          } else {
-            document.cookie = `googtrans=/ro/${lang.code}; path=/;`;
+        clearGoogTransCookies();
+        window.location.reload();
+      }, 100);
+      return;
+    }
+
+    // Switch to other language
+    localStorage.setItem("selectedLang", lang.code);
+    
+    const combo = document.querySelector(".goog-te-combo");
+    if (combo) {
+      combo.value = lang.code;
+      combo.dispatchEvent(new Event("change", { bubbles: true }));
+    } else {
+      // Google Translate not initialized yet - init it now
+      if (window.google && window.google.translate) {
+        new window.google.translate.TranslateElement(
+          { pageLanguage: "ro", includedLanguages: "ro,en,fr,de,it", autoDisplay: false },
+          "google_translate_element"
+        );
+        const waitCombo = setInterval(() => {
+          const c = document.querySelector(".goog-te-combo");
+          if (c) {
+            c.value = lang.code;
+            c.dispatchEvent(new Event("change", { bubbles: true }));
+            clearInterval(waitCombo);
           }
-          window.location.reload();
-        }
-      }, 300);
+        }, 300);
+        setTimeout(() => clearInterval(waitCombo), 8000);
+      } else {
+        // Script not loaded - set cookie and reload
+        document.cookie = `googtrans=/ro/${lang.code}; path=/`;
+        window.location.reload();
+      }
     }
   }, []);
 
