@@ -92,6 +92,9 @@ body > .skiptranslate { display: none !important; height: 0 !important; overflow
 .goog-text-highlight { background: none !important; box-shadow: none !important; }
 .notranslate { translate: no; }
 
+/* Hide Emergent badge */
+#emergent-badge { display: none !important; visibility: hidden !important; }
+
 @layer base {
   * {
     @apply border-border;

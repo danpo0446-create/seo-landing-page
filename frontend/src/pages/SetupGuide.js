@@ -246,7 +246,7 @@ const SetupGuide = () => {
                   <div className="w-full md:w-56 rounded-xl bg-[#1e1e21] border border-[#2a2a2d] p-6 text-center">
                     <p className="text-xs text-[#a1a1aa] mb-1">Pret unic</p>
                     <div className="text-4xl font-extrabold text-white mb-1">&euro;79</div>
-                    <p className="text-xs text-[#71717a] mb-5">platire o singura data</p>
+                    <p className="text-xs text-[#71717a] mb-5">plata unica</p>
                     <Link
                       to="/contact"
                       data-testid="setup-contact-btn"
