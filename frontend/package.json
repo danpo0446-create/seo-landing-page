@@ -61,8 +61,8 @@
     "ajv-keywords": "3.5.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "craco start",
+    "build": "craco build",
     "test": "react-scripts test"
   },
   "browserslist": {
@@ -79,7 +79,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@craco/craco": "^7.1.0",
+    "@craco/craco": "6.4.5",
     "@eslint/js": "9.23.0",
     "autoprefixer": "^10.4.20",
     "eslint": "9.23.0",
