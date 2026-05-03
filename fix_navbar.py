@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+content = '''import { useState, useEffect } from "react";
 import { Zap, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -132,4 +132,8 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar;'''
+
+with open('frontend/src/components/landing/Navbar.js', 'w', encoding='utf-8') as f:
+    f.write(content)
+print('OK')
