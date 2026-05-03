@@ -40,22 +40,23 @@ const Navbar = () => {
           : "bg-[#0a0a0a]"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 h-[72px] flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-10 h-[64px] flex items-center justify-between">
         <Link
           to="/"
           data-testid="logo-link"
-          className="flex items-center gap-2.5 group"
+          className="flex items-center gap-2 group flex-shrink-0"
         >
-          <div className="w-9 h-9 rounded-lg bg-[#00D26A] flex items-center justify-center transition-transform group-hover:scale-110">
-            <Zap className="w-5 h-5 text-black" />
+          <div className="w-8 h-8 rounded-lg bg-[#00D26A] flex items-center justify-center transition-transform group-hover:scale-110">
+            <Zap className="w-4 h-4 text-black" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-white">SEO Automation</span>
+          <span className="text-base font-bold tracking-tight text-white hidden sm:inline">SEO Automation</span>
+          <span className="text-base font-bold tracking-tight text-white sm:hidden">SEO Auto</span>
         </Link>
 
         {isHome && (
           <div className="hidden md:flex items-center gap-10">
             {navLinks.map((l) => (
-              <a
+              
                 key={l.href}
                 href={l.href}
                 data-testid={`nav-link-${l.href.slice(1)}`}
@@ -85,13 +86,22 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <button
-          data-testid="mobile-menu-toggle"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-white p-1"
-        >
-          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+        <div className="flex md:hidden items-center gap-2">
+          <Link
+            to="/register"
+            onClick={() => setMobileOpen(false)}
+            className="text-[13px] font-semibold px-3 py-2 bg-[#00D26A] text-black rounded-lg whitespace-nowrap"
+          >
+            Începe Gratuit
+          </Link>
+          <button
+            data-testid="mobile-menu-toggle"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="text-white p-1"
+          >
+            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
       </div>
 
       {mobileOpen && (
@@ -100,7 +110,7 @@ const Navbar = () => {
           className="md:hidden bg-[#0a0a0a]/95 backdrop-blur-2xl border-t border-[#1e1e21] px-6 py-6 space-y-1"
         >
           {isHome && navLinks.map((l) => (
-            <a
+            
               key={l.href}
               href={l.href}
               onClick={(e) => scrollTo(e, l.href)}
@@ -116,15 +126,6 @@ const Navbar = () => {
           >
             Autentificare
           </Link>
-          <div className="pt-4">
-            <Link
-              to="/register"
-              onClick={() => setMobileOpen(false)}
-              className="block w-full text-center px-5 py-2.5 bg-[#00D26A] text-black font-semibold rounded-lg text-sm"
-            >
-              Începe Gratuit
-            </Link>
-          </div>
         </div>
       )}
     </nav>
